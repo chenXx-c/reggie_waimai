@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  #??get???????tomcat?header??????
+  tomcat:
+    max-http-form-post-size: 81920
+spring:
+  application:
+    name: reggie_waimai
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/regg
+      username: root
+      password: 123456
+mybatis-plus:
+  configuration:
+    # ??????????????????????????????????????? ???
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+# 指定上传下载文件的缓存路径
+reggie:
+  path: D:\img\
